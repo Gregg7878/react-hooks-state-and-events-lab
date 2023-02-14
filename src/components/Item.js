@@ -9,7 +9,7 @@ function Item({ name, category }) {
 
   return (
     <li className={isInCart ? "in-cart" : ""}>
-      {name} - ${price}
+      {name} - ${category}
       <button onClick={toggleCart}>
         {isInCart ? "Remove From Cart" : "Add to Cart"}
       </button>
