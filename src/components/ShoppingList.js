@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Item from "./Item";
 
 function ShoppingList({ items }) {
@@ -20,13 +20,13 @@ function ShoppingList({ items }) {
     <div>
       <select value={selectedCategory} onChange={handleCategoryChange}>
         <option value="All">All</option>
-        <option value="Food">Food</option>
-        <option value="Electronics">Electronics</option>
-        <option value="Clothes">Clothes</option>
+        <option value="Dairy">Dairy</option>
+        <option value="Produce">Produce</option>
+        <option value="Dessert">Dessert</option>
       </select>
-      <ul>
+      <ul className="Items">
         {filteredItems.map((item) => (
-          <Item key={item.id} name={item.name} price={item.price} />
+          <Item key={item.id} name={item.name} category={item.category} />
         ))}
       </ul>
     </div>
